@@ -15,7 +15,7 @@ export default function ComingSoon() {
         transition={{ duration: 1.2, ease: "easeOut" }}
       >
         {/* Heading */}
-        <h1 className="text-5xl md:text-7xl font-serif font-bold text-[var(--color-brickred)] tracking-wide drop-shadow-sm">
+        <h1 className="text-5xl md:text-7xl font-serif font-bold text-[var(--color-lightgray)] tracking-wide drop-shadow-sm">
           Coming Soon
         </h1>
         <p className="text-lg md:text-xl max-w-xl text-[var(--color-darkgray)] font-sans font-500">
