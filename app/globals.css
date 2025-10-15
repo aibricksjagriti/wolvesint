@@ -1,26 +1,127 @@
 @import "tailwindcss";
 
+/* ===============================
+    Root Color Variables
+   =============================== */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Base Theme */
+  --foreground: #343131;
+  --background: #F7EEDF;
+
+  /* Custom Palette */
+  --color-darkgray: #343131;
+  --color-brickred: #8D0B41;
+  --color-ochre: #d5b258;
+  --color-lightcream: #F7EEDF;
 }
 
+/* ===============================
+    Tailwind Inline Theme Config
+   =============================== */
 @theme inline {
-  --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-background: var(--background);
+
+  /* Custom Colors */
+  --color-darkgray: var(--color-darkgray);
+  --color-brickred: var(--color-brickred);
+  --color-ochre: var(--color-ochre);
+  --color-lightcream: var(--color-lightcream);
+
+  /* Font setup */
+  /* --font-serif: "DM Serif Display", serif;
+  --font-sans: "Inter", sans-serif; */
+  --font-serif: "Cinzel", serif;
+  --font-sans: "Lato", sans-serif;
 }
 
+/* ===============================
+    Dark Mode
+   =============================== */
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
     --foreground: #ededed;
+    --background: #343131;
   }
 }
 
+/* ===============================
+    Base Styles
+   =============================== */
 body {
-  background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--background);
+  font-family: var(--font-sans);
+  margin: 0;
+  padding: 0;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+/* ===============================
+    Layout / Section Helpers
+   =============================== */
+
+/* Header & Footer */
+.header, header {
+  background-color: var(--color-brickred);
+  color: var(--color-lightcream);
+}
+
+/* .footer, footer {
+  background-color: var(--color-brickred);
+  color: var(--color-lightcream);
+} */
+
+/* Buttons */
+.btn-primary {
+  background-color: var(--color-brickred);
+  color: var(--color-lightcream);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 10px rgba(141, 11, 65, 0.3);
+}
+
+.btn-primary:hover {
+  background-color: #75103c;
+  box-shadow: 0 0 20px rgba(141, 11, 65, 0.5);
+}
+
+.btn-secondary {
+  background-color: var(--color-ochre);
+  color: var(--color-darkgray);
+  transition: background-color 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background-color: #c29b4f;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--color-darkgray);
+  font-family: var(--font-serif);
+}
+
+/* Section Background Variants */
+.section-contrast {
+  background-color: var(--color-ochre);
+}
+
+.section-light {
+  background-color: var(--color-lightcream);
+}
+
+/* ===============================
+    Animation Helpers
+   =============================== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse-slow {
+  0%, 100% { opacity: 0.1; }
+  50% { opacity: 0.2; }
+}
+.animate-pulse-slow {
+  animation: pulse-slow 6s ease-in-out infinite;
 }
