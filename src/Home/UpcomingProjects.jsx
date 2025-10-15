@@ -118,7 +118,7 @@ export default function UpcomingProjects() {
   return (
     <section className="py-16 bg-[#f8f8f8] text-center w-full">
       {/* Heading */}
-      <div className="mb-10">
+      <div className="">
         <div className="flex justify-center mb-2">
           <Building2 size={40} className="text-[var(--color-ochre)]" />
         </div>
