@@ -4,7 +4,7 @@ import MultiSelect from "./MultiSelect";
 
 export default function HeroSection() {
   return (
-    <section className="relative h-[700px] w-full overflow-hidden mb-40">
+    <section className="relative h-[700px] w-full overflow-hidden ">
       {/* Background Video */}
       <video
         className="absolute top-0 left-0 w-full h-full object-cover"

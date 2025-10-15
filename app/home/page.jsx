@@ -1,13 +1,17 @@
 import Footer from "@/src/Footer";
 import HeroSection from "@/src/Home/HeroSection";
 import Navbar from "@/src/Home/Navbar";
+import ProjectSlider from "@/src/Home/ProjectSlider";
+import UpcomingProjects from "@/src/Home/UpcomingProjects";
 import React from "react";
 
 const page = () => {
   return (
-    <main className="min-h-screen bg-[var(--color-lightcream)]">
+    <main className=" bg-[#ffffff]">
       <Navbar />
       <HeroSection />
+      <UpcomingProjects />
+      {/* <ProjectSlider /> */}
       {/* <section
         id="home"
         className="flex flex-col items-center justify-center h-screen text-center"
