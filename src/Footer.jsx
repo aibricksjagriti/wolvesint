@@ -27,7 +27,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 text-sm md:text-base">
           {/* Company Info */}
           <div>
-            <h2 className="text-2xl font-semibold mb-4">LuxeEstates</h2>
+            <h2 className="text-2xl font-semibold mb-4">AI BRICKS</h2>
           </div>
 
           {/* Features */}
