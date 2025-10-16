@@ -125,7 +125,7 @@ export default function UpcomingProjects() {
         <h2 className="text-4xl font-serif font-bold text-[var(--color-darkgray)] uppercase">
           Upcoming Projects
         </h2>
-        <p className="text-gray-600 mt-2 text-lg">New upcoming developments</p>
+        <p className="text-gray-600 mt-2 text-xl">New upcoming developments</p>
       </div>
 
       <ProjectSlider />
