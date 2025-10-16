@@ -124,8 +124,8 @@ export default function TrendingProjects() {
 
               {/* Content */}
               <div className="p-5 sm:p-6 text-left">
-                <h3 className="text-[var(--color-darkgray)]  sm:text-xl font-semibold mb-1 hover:text-[var(--color-brickred)] transition-colors cursor-pointer">
-                  <h2 className="text-xl">{p.name}</h2>
+                <h3 className="text-[var(--color-darkgray)] text-xl sm:text-xl font-semibold mb-1 hover:text-[var(--color-brickred)] transition-colors cursor-pointer">
+                  {p.name}
                 </h3>
                 <p className="text-gray-500 text-lg mb-4">{p.type}</p>
 
