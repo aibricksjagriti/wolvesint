@@ -141,7 +141,7 @@ const ProjectSlider = () => {
   };
 
   return (
-    <div className="relative flex flex-col items-center justify-center bg-[#f8f8f8] min-h-screen overflow-hidden px-4">
+    <div className="relative flex flex-col items-center justify-center bg-[#f8f8f8] py-10 overflow-hidden px-4">
       {/* Slider */}
       <div className="relative flex justify-center items-center w-full h-[500px] max-w-[480px] md:max-w-[600px] lg:max-w-[700px]">
         {projects.map((project, index) => (
