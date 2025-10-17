@@ -8,6 +8,9 @@ import TrendingProjects from "@/src/Home/TrendingProjects";
 import UpcomingProjects from "@/src/Home/UpcomingProjects";
 import React from "react";
 import InDemandSection from "@/src/Home/InDemandSection";
+import Cta from "@/src/Home/Cta";
+import EasyForYou from "@/src/Home/EasyForYou";
+import StatsSection from "@/src/Home/StatsSection";
 
 const page = () => {
   return (
@@ -18,8 +21,11 @@ const page = () => {
       <TrendingProjects />
       <PropertyTypeSlider />
       <LogoSlider />
-      {/* <DemandSection /> */}
-      <InDemandSection />
+      <DemandSection />
+      {/* <InDemandSection /> */}
+      <Cta />
+      <EasyForYou />
+      <StatsSection />
       <Footer />
     </main>
   );
