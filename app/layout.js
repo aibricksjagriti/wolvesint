@@ -14,14 +14,16 @@ const lato = Lato({
 });
 
 export const metadata = {
-  title: "Your Luxury Real Estate",
+  title: "Live The Future",
   description: "Coming Soon",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${cinzel.variable} ${lato.variable} antialiased`}>
+      <body
+        className={`${cinzel.variable} ${lato.variable} antialiased bg-[var(--background)]`}
+      >
         {children}
       </body>
     </html>

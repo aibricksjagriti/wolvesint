@@ -22,7 +22,7 @@ export default function HeroSection() {
       <div className="absolute bottom-0 left-0 w-full flex flex-col items-center z-10 text-white pb-10 px-4">
         {/* Heading */}
         <h1 className="text-3xl md:text-5xl lg:text-6xl font-serif font-bold mb-6 text-[var(--color-lightcream)] drop-shadow-lg text-center">
-          The Future Of Real Estate
+          Live The Future
         </h1>
 
         {/* Search Filter Box */}
