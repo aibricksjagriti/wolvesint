@@ -3,6 +3,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 
 const locations = [
+  // Dubai Area
   {
     name: "Palm Jebel Ali",
     image: "/home/indemand/1.jpg",
@@ -19,22 +20,33 @@ const locations = [
     name: "Dubai Creek Harbour",
     image: "/home/indemand/4.jpg",
   },
-  {
-    name: "Palm Jumeirah",
-    image: "/home/indemand/5.jpg",
-  },
-  {
-    name: "Downtown Dubai",
-    image: "/home/indemand/6.jpg",
-  },
-  {
-    name: "Business Bay",
-    image: "/home/indemand/7.jpg",
-  },
-  {
-    name: "Bluewaters Island",
-    image: "/home/indemand/8.jpg",
-  },
+  // {
+  //   name: "Palm Jumeirah",
+  //   image: "/home/indemand/5.jpg",
+  // },
+  // {
+  //   name: "Downtown Dubai",
+  //   image: "/home/indemand/6.jpg",
+  // },
+  // {
+  //   name: "Business Bay",
+  //   image: "/home/indemand/7.jpg",
+  // },
+  // {
+  //   name: "Bluewaters Island",
+  //   image: "/home/indemand/8.jpg",
+  // },
+  // Pune Areas
+  { name: "Koregaon Park", image: "/home/indemand/koregaon-park.jpg" },
+  { name: "Hinjewadi", image: "/home/indemand/hinjewadi.jpg" },
+  { name: "Baner", image: "/home/indemand/baner.webp" },
+  { name: "Kharadi", image: "/home/indemand/kharadi.jpeg" },
+
+  // Mumbai Areas
+  { name: "Bandra West", image: "/home/indemand/bandra-west.jpg" },
+  { name: "Powai", image: "/home/indemand/powai.webp" },
+  { name: "Worli", image: "/home/indemand/worli.webp" },
+  { name: "Andheri East", image: "/home/indemand/andheri-east.jpg" },
 ];
 
 export default function DemandSection() {
