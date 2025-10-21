@@ -11,7 +11,10 @@ import {
   Copyright,
   Send,
 } from "lucide-react";
-import { FaXTwitter, FaTiktok, FaTelegramPlane } from "react-icons/fa";
+
+import { ImLinkedin } from "react-icons/im";
+import { FaSquareInstagram } from "react-icons/fa6";
+import { FaFacebookSquare } from "react-icons/fa";
 
 export default function Footer() {
   return (
@@ -109,24 +112,21 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-2">Contact Us</h3>
             <p className="mb-2">
-              <span className="font-semibold">Call:</span> 800-0099
+              <span className="font-semibold">Call:</span> 8130120098
             </p>
+
             <p className="mb-2">
-              <span className="font-semibold">UAE Address:</span> 1702 Al Moosa
-              Tower 1, Trade Centre Sheikh Zayed Road, Dubai
-            </p>
-            <p className="mb-2">
-              <span className="font-semibold">India Address:</span> SCO 35-36,
-              Marigold Business Park, Gumtala Sub Urban, D-Block, Ranjit Avenue,
-              Amritsar, Punjab 143001
+              <span className="font-semibold">Address:</span> Office no 428, The
+              address Commercia, Hinjawadi Rd, Shankar Kalat Nagar, Wakad, Pune,
+              Pimpri-Chinchwad, Maharashtra 411057
             </p>
             <p className="mb-4">
               <span className="font-semibold">Email:</span>{" "}
               <a
-                href="mailto:info@wolvesint.ae"
+                href="mailto:info@aibricksrealtors.com"
                 className="hover:underline text-[var(--color-ochre)]"
               >
-                info@wolvesint.ae
+                info@aibricksrealtors.com
               </a>
             </p>
 
@@ -134,39 +134,22 @@ export default function Footer() {
             <div className="flex flex-wrap gap-3">
               <a
                 href="#"
-                className="bg-white text-[#162162] rounded-lg p-2 hover:scale-110 transition-transform"
-              >
-                {/* <FaXTwitter size={20} /> */}
-              </a>
-              <a
-                href="#"
                 className="bg-white text-[#1877F2] rounded-lg p-2 hover:scale-110 transition-transform"
               >
-                {/* <Facebook size={20} /> */}
+                <FaFacebookSquare />
               </a>
               <a
                 href="#"
                 className="bg-white text-[#0A66C2] rounded-lg p-2 hover:scale-110 transition-transform"
               >
                 {/* <Linkedin size={20} /> */}
+                <ImLinkedin />
               </a>
               <a
                 href="#"
                 className="bg-white text-[#E1306C] rounded-lg p-2 hover:scale-110 transition-transform"
               >
-                {/* <Instagram size={20} /> */}
-              </a>
-              <a
-                href="#"
-                className="bg-white text-black rounded-lg p-2 hover:scale-110 transition-transform"
-              >
-                {/* <FaTiktok size={20} /> */}
-              </a>
-              <a
-                href="#"
-                className="bg-white text-[#0088cc] rounded-lg p-2 hover:scale-110 transition-transform"
-              >
-                {/* <FaTelegramPlane size={20} /> */}
+                <FaSquareInstagram />
               </a>
             </div>
           </div>
@@ -176,8 +159,8 @@ export default function Footer() {
         <div className="border-t border-white/20 mt-10 pt-4 text-center text-sm">
           <p>
             © Copyright {new Date().getFullYear()}{" "}
-            <span className="font-semibold">Wolves International</span> - All
-            Rights Reserved.
+            <span className="font-semibold">Ai Bricks</span> - All Rights
+            Reserved.
           </p>
         </div>
       </div>
