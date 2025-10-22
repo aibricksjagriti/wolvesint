@@ -321,7 +321,7 @@ const MissionVisionSection = () => {
           {/* Vision */}
           <motion.div
             variants={fadeUp}
-            className="bg-gradient-to-r from-[#5a082a] via-[#8D0B41] to-[#a63b1e] text-white rounded-2xl p-8 shadow-xl lg:ml-[-70px] md:ml-0 sm:ml-0 lg:w-[90%] w-full hover:shadow-[0_0_25px_rgba(213,178,88,0.5)] transition-shadow duration-700"
+            className="bg-gradient-to-r from-[#5a082a] via-[#8D0B41] to-[#a63b1e] text-white rounded-sm p-8 shadow-xl   w-full hover:shadow-[0_0_25px_rgba(213,178,88,0.5)] transition-shadow duration-700"
           >
             <h2 className="text-4xl font-bold mb-4">
               <span className="text-[var(--color-lightcream)]">Our </span>
