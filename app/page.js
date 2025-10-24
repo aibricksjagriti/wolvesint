@@ -7,14 +7,16 @@ import UpcomingProjects from "@/src/Home/UpcomingProjects";
 import Cta from "@/src/Home/Cta";
 import EasyForYou from "@/src/Home/EasyForYou";
 import StatsSection from "@/src/Home/StatsSection";
-import TrendingProjects from "@/src/Home/TrendingProjects";
+// import TrendingProjects from "@/src/Home/TrendingProjects";
+import TrendingProjectsClient from "@/src/Home/TrendingProjectsClient";
 
 export default function Home() {
   return (
     <main className=" bg-[var(--background)]">
       <HeroSection />
       <UpcomingProjects />
-      <TrendingProjects />
+      {/* <TrendingProjects /> */}
+      <TrendingProjectsClient />
       <PropertyTypeSlider />
       <LogoSlider />
       <DemandSection />
