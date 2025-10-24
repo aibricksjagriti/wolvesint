@@ -238,7 +238,7 @@ const MissionVisionSection = () => {
   };
 
   return (
-    <section className="w-full bg-[#f8f9fb] flex flex-col items-center justify-center lg:py-20 py-10 px-4 md:px-8 lg:px-16 overflow-hidden">
+    <section className="w-[90%] mx-auto  flex flex-col items-center justify-center lg:py-20 py-10  px-4 md:px-8 lg:px-16 overflow-hidden">
       <motion.div
         initial="hidden"
         whileInView="visible"

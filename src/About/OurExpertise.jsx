@@ -27,12 +27,12 @@ export default function OurExpertise() {
   ];
 
   return (
-    <section className="w-full py-16 px-6 md:px-12">
+    <section className="w-[90%] mx-auto py-16 px-6 md:px-12">
       <div className="max-w-7xl mx-auto flex flex-col gap-10">
         {/* Header section */}
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
           <div>
-            <h2 className="lg:text-4xl sm:text-4xl font-semibold text-[var(--color-darkgray)]">
+            <h2 className="text-4xl  font-semibold text-[var(--color-darkgray)]">
               OUR <span className="text-[var(--color-ochre)]">EXPERTISE</span>
             </h2>
             <p className="text-gray-600 mt-2 text-lg">

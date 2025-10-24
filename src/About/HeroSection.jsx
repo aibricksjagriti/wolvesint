@@ -53,7 +53,7 @@ import { Search } from "lucide-react";
 
 export default function HeroSection() {
   return (
-    <section className="relative py-16 lg:py-24 justify-center overflow-hidden">
+    <section className="relative w-[90%] mx-auto py-16 lg:mt-20 sm:mt-0 lg:mb-10 justify-center overflow-hidden">
       <div className="container mx-auto px-6 lg:px-12 grid lg:grid-cols-2 items-center gap-12">
         {/* --- LEFT CONTENT --- */}
         <motion.div
@@ -61,7 +61,7 @@ export default function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <h1 className="text-4xl lg:text-6xl font-bold text-[var(--color-darkgray)] leading-tight mb-6">
+          <h1 className="text-4xl lg:text-6xl font-bold text-[var(--color-darkgray)] leading-tight mb-6 mt-16">
             Discover Your Dream <br />
             <span className="text-[#d5b258]">Property Destination</span>
           </h1>
