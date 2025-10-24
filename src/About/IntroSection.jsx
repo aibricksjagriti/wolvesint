@@ -50,7 +50,7 @@ const IntroSection = () => {
               transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
               viewport={{ once: true }}
             >
-              Abhishek Mukherjee
+              Abhishek Saigal
             </motion.h2>
 
             <motion.h3
@@ -70,8 +70,8 @@ const IntroSection = () => {
               transition={{ duration: 0.8, delay: 0.5 }}
               viewport={{ once: true }}
             >
-              Abhishek Mukherjee is the driving force behind AI Bricks Realtors,
-              a brand built on innovation, trust, and excellence in modern real
+              Abhishek Saigal is the driving force behind AI Bricks Realtors, a
+              brand built on innovation, trust, and excellence in modern real
               estate. With a clear vision to revolutionize the property
               landscape, Abhishek brings together architectural precision,
               cutting-edge technology, and human-centered design to redefine how
