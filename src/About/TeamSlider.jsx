@@ -180,7 +180,7 @@ export default function TeamSection() {
                 </p>
 
                 <div className="flex gap-3 flex-wrap justify-center">
-                  <button className="flex items-center gap-2 bg-gray-900 text-white px-5 py-2 rounded-full text-sm hover:bg-gray-800 transition">
+                  <button className="flex items-center gap-2 bg-[var(--color-brickred)] text-white px-5 py-2 rounded-full text-sm hover:bg-[var(--color-ochre)] transition">
                     Start Chat <ArrowRight className="w-4 h-4" />
                   </button>
                   <button className="flex items-center gap-2 border border-gray-300 text-gray-700 px-5 py-2 rounded-full text-sm hover:bg-gray-100 transition">
