@@ -86,32 +86,41 @@ export default function Navbar() {
 
         <div className="flex flex-col mt-6 space-y-6 px-6">
           <a
-            href="#home"
+            href="/"
             className="text-[var(--color-darkgray)] font-sans text-lg hover:text-[var(--color-brickred)] transition"
             onClick={() => setIsOpen(false)}
           >
             Home
           </a>
           <a
-            href="#about"
+            href="/about"
             className="text-[var(--color-darkgray)] font-sans text-lg hover:text-[var(--color-brickred)] transition"
             onClick={() => setIsOpen(false)}
           >
             About
           </a>
           <a
-            href="#property"
+            href="/properties"
             className="text-[var(--color-darkgray)] font-sans text-lg hover:text-[var(--color-brickred)] transition"
             onClick={() => setIsOpen(false)}
           >
             Property Listed
           </a>
-          <button
-            className="bg-[var(--color-brickred)] text-[var(--color-lightcream)] px-6 py-2 rounded-full font-sans font-semibold hover:bg-[var(--color-ochre)] transition"
+          <a
+            href="/news"
+            className="text-[var(--color-darkgray)] font-sans text-lg hover:text-[var(--color-brickred)] transition"
             onClick={() => setIsOpen(false)}
           >
-            Contact Us
-          </button>
+            News
+          </a>
+          <a href="/contact">
+            <button
+              className="bg-[var(--color-brickred)] text-[var(--color-lightcream)] px-6 py-2 rounded-full font-sans font-semibold hover:bg-[var(--color-ochre)] transition"
+              onClick={() => setIsOpen(false)}
+            >
+              Contact Us
+            </button>
+          </a>
         </div>
       </div>
     </>
