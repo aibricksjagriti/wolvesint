@@ -69,7 +69,7 @@ export default function TeamSection() {
   return (
     <section className="w-full py-16 px-4 bg-gradient-to-r from-[#5a082a] via-[#8D0B41] to-[#a63b1e]">
       {/* Header + Buttons */}
-      <div className="w-[90%] max-w-6xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+      <div className="w-[85%] mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
         <div>
           <p className="text-sm uppercase text-[var(--color-ochre)] mb-2">
             Our Team
