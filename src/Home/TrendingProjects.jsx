@@ -49,7 +49,7 @@ const projects = [
     area: "1450 sq.ft",
     completion: "Q2 2028",
     price: "1.2 Cr INR",
-    trending: true,
+    tag: "Trending",
     image: "/home/properties/godrej-horizon.jpg",
   },
   {
@@ -61,7 +61,7 @@ const projects = [
     area: "1280 sq.ft",
     completion: "Q4 2027",
     price: "98L INR",
-    trending: true,
+    tag: "Trending",
     image: "/home/properties/kolte-patil-universe.jpg",
   },
   {
@@ -73,7 +73,7 @@ const projects = [
     area: "2500 sq.ft",
     completion: "Q3 2029",
     price: "2.3 Cr INR",
-    trending: true,
+    tag: "Trending",
     image: "/home/properties/lodha-bella-vita.webp",
   },
 
@@ -87,7 +87,7 @@ const projects = [
     area: "1800 sq.ft",
     completion: "Q1 2030",
     price: "3.8 Cr INR",
-    trending: true,
+    tag: "Trending",
     image: "/home/properties/obroi-sky-city.jpg",
   },
   {
@@ -99,7 +99,7 @@ const projects = [
     area: "2200 sq.ft",
     completion: "Q4 2028",
     price: "5.2 Cr INR",
-    trending: true,
+    tag: "Trending",
     image: "/home/properties/lodha-park.jpg",
   },
   {
@@ -111,7 +111,7 @@ const projects = [
     area: "1200 sq.ft",
     completion: "Q2 2029",
     price: "2.4 Cr INR",
-    trending: true,
+    tag: "Trending",
     image: "/home/properties/Godrej-Bayview.webp",
   },
 ];
