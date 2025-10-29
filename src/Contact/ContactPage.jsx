@@ -19,8 +19,8 @@ export default function ContactPage() {
   };
 
   return (
-    <section className="min-h-screen bg-white text-gray-900 flex flex-col items-center justify-center px-6 lg:px-20 py-28 mt-20">
-      <div className="max-w-6xl w-full grid md:grid-cols-2 gap-10 items-start">
+    <section className="min-h-screen text-gray-900 flex flex-col items-center justify-center px-6 lg:px-20 py-16 ">
+      <div className="max-w-6xl w-full grid md:grid-cols-2 gap-10 items-start mt-28">
         {/* Left Side Image + Info */}
         <div className="space-y-10">
           <div className="overflow-hidden shadow-lg">
@@ -143,7 +143,7 @@ export default function ContactPage() {
 
           <button
             type="submit"
-            className="w-full bg-[var(--color-brickred)] text-white font-medium py-3 rounded-xl hover:bg-[var(--color-ochre)] transition-all duration-300"
+            className="w-full bg-[var(--color-brickred)] text-white text-lg py-3 rounded-xl hover:bg-[var(--color-ochre)] transition-all duration-300"
           >
             Submit Form →
           </button>

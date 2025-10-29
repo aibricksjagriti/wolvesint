@@ -42,7 +42,7 @@ export default function Navbar() {
               NEWS
             </a>
             <a href="/contact">
-              <button className="ml-4 bg-[var(--color-ochre)] text-[var(--color-darkgray)] px-5 py-2 rounded-full font-sans font-semibold hover:bg-[var(--color-brickred)] transition-all">
+              <button className="ml-4 bg-[var(--color-ochre)] text-[var(--color-darkgray)] px-5 py-2 rounded-full font-sans font-semibold hover:bg-[var(--color-brickred)] hover:border-2 hover:border-[var(--color-lightcream)] hover:text-[var(--color-lightcream)] transition-all">
                 CONTACT US
               </button>
             </a>
