@@ -7,8 +7,8 @@ const PageContact = () => {
   return (
     <div>
       {/* <ComingSoon /> */}
-      <ContactPage />
       <CompanyDetails />
+      <ContactPage />
     </div>
   );
 };

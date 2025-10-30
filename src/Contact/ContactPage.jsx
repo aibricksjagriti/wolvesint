@@ -20,7 +20,7 @@ export default function ContactPage() {
 
   return (
     <section className="min-h-screen text-gray-900 flex flex-col items-center justify-center px-6 lg:px-20 py-16 ">
-      <div className="max-w-6xl w-full grid md:grid-cols-2 gap-10 items-start mt-28">
+      <div className="max-w-6xl w-full grid md:grid-cols-2 gap-10 items-start ">
         {/* Left Side Image + Info */}
         <div className="space-y-10">
           <div className="overflow-hidden shadow-lg">

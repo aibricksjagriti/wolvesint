@@ -26,9 +26,12 @@ export default function CompanyDetails() {
   ];
 
   return (
-    <section className="w-full py-16 px-6 md:px-10">
+    <section className="w-full py-16 ">
+      <div className="w-full h-[500px]">
+        <img src="/home/dubai.webp" className="w-full h-full" />
+      </div>
       {/* Heading */}
-      <h2 className="text-center text-3xl md:text-4xl text-[var(--color-darkgray)] font-bold mb-12">
+      <h2 className="text-center text-3xl md:text-4xl text-[var(--color-darkgray)] font-bold mt-16 mb-12">
         Our{" "}
         <span className="text-[var(--color-darkgray)]  bg-clip-text">
           Company Details
