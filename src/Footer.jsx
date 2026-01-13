@@ -62,21 +62,21 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-4">Company</h3>
             <ul className="space-y-2">
-              <li>
+              {/* <li>
                 <a href="/news" className="hover:text-[var(--color-ochre)]">
                   News
                 </a>
-              </li>
+              </li> */}
               <li>
                 <a href="/about" className="hover:text-[var(--color-ochre)]">
                   About Us
                 </a>
               </li>
-              <li>
+              {/* <li>
                 <a href="/team" className="hover:text-[var(--color-ochre)]">
                   Our Team
                 </a>
-              </li>
+              </li> */}
             </ul>
           </div>
 
@@ -100,11 +100,11 @@ export default function Footer() {
                   Privacy Policy
                 </a>
               </li>
-              <li>
+              {/* <li>
                 <a href="/security" className="hover:text-[var(--color-ochre)]">
                   Security
                 </a>
-              </li>
+              </li> */}
             </ul>
           </div>
 
@@ -117,8 +117,8 @@ export default function Footer() {
 
             <p className="mb-2">
               <span className="font-semibold">Address:</span> Office no 428, The
-              address Commercia, Hinjawadi Rd, Shankar Kalat Nagar, Wakad, Pune,
-              Pimpri-Chinchwad, Maharashtra 411057
+              address Commercia, Hinjawadi Rd, Pune, Pimpri-Chinchwad,
+              Maharashtra 411057
             </p>
             <p className="mb-4">
               <span className="font-semibold">Email:</span>{" "}
@@ -133,20 +133,16 @@ export default function Footer() {
             {/* Social Icons */}
             <div className="flex flex-wrap gap-3">
               <a
-                href="#"
-                className="bg-white text-[#1877F2] rounded-lg p-2 hover:scale-110 transition-transform"
-              >
-                <FaFacebookSquare />
-              </a>
-              <a
-                href="#"
+                href="https://www.linkedin.com/company/aibricks-realtors/"
+                target="_blank"
                 className="bg-white text-[#0A66C2] rounded-lg p-2 hover:scale-110 transition-transform"
               >
                 {/* <Linkedin size={20} /> */}
                 <ImLinkedin />
               </a>
               <a
-                href="#"
+                href="https://www.instagram.com/aibricksrealtors/?igsh=MXd4b2xpaTcyb2dhNQ%3D%3D#"
+                target="_blank"
                 className="bg-white text-[#E1306C] rounded-lg p-2 hover:scale-110 transition-transform"
               >
                 <FaSquareInstagram />
@@ -167,7 +163,7 @@ export default function Footer() {
 
       {/* WhatsApp Floating Button */}
       <a
-        href="https://wa.me/9718000099"
+        href="https://wa.me/8130120098"
         target="_blank"
         rel="noopener noreferrer"
         className="fixed bottom-5 right-5 bg-green-500 text-white rounded-full p-4 shadow-lg hover:scale-110 transition-transform"

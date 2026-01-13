@@ -9,6 +9,7 @@ import EasyForYou from "@/src/Home/EasyForYou";
 import StatsSection from "@/src/Home/StatsSection";
 // import TrendingProjects from "@/src/Home/TrendingProjects";
 import TrendingProjectsClient from "@/src/Home/TrendingProjectsClient";
+// import Footer from "@/src/Home/Footer1";
 
 export default function Home() {
   return (

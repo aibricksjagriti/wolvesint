@@ -10,19 +10,6 @@ import { Building2 } from "lucide-react";
 import ProjectSlider from "./ProjectSlider";
 
 export default function UpcomingProjects() {
-  const projects = [
-    { name: "Sharjah", image: "/home/sarjah.webp" },
-    { name: "RAK", image: "/home/rak.webp" },
-    { name: "Dubai", image: "/home/dubai.webp" },
-    { name: "Ajman", image: "/home/ajman.webp" },
-    { name: "Abu Dhabi", image: "/home/abu-dhabi.webp" },
-    { name: "Sharjah", image: "/home/sarjah.webp" },
-    { name: "RAK", image: "/home/rak.webp" },
-    { name: "Dubai", image: "/home/dubai.webp" },
-    { name: "Ajman", image: "/home/ajman.webp" },
-    // { name: "Abu Dhabi", image: "/home/abu-dhabi.webp" },
-  ];
-
   return (
     <section className="pt-16  bg-[#f8f8f8] text-center w-full">
       {/* Heading */}
@@ -35,7 +22,6 @@ export default function UpcomingProjects() {
         </h2>
         <p className="text-gray-600 mt-2 text-xl">New upcoming developments</p>
       </div>
-
       <ProjectSlider />
     </section>
   );

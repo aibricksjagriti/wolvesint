@@ -102,6 +102,7 @@ import "./globals.css";
 import Navbar from "@/src/Home/Navbar";
 import Footer from "@/src/Footer";
 import ClientLayout from "@/src/ClientLayout";
+import ContactModal from "@/src/Modal/ContactModal";
 
 const cinzel = Cinzel({
   subsets: ["latin"],
@@ -130,6 +131,7 @@ export default function RootLayout({ children }) {
         <ClientLayout>
           <Navbar />
           {children}
+          <ContactModal />
           <Footer />
         </ClientLayout>
       </body>
