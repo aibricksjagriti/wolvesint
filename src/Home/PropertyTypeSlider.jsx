@@ -5,27 +5,35 @@ import { ChevronLeft, ChevronRight, Building2 } from "lucide-react";
 
 const propertyTypes = [
   {
-    title: "Townhouses",
-    subtitle: "Suburban Elegance",
+    title: "Apartments",
+    subtitle: "Modern City Living",
     image: "/home/abu-dhabi.webp",
   },
-  { title: "Villas", subtitle: "Luxury Retreats", image: "/home/ajman.webp" },
+  {
+    title: "Villas",
+    subtitle: "Luxury Private Homes",
+    image: "/home/ajman.webp",
+  },
   {
     title: "Penthouses",
-    subtitle: "Skyline Living",
+    subtitle: "Elite Sky-High Living",
     image: "/home/dubai.webp",
   },
   {
-    title: "Mansions",
-    subtitle: "Exclusive Residences",
+    title: "Commercials",
+    subtitle: "Prime Business Spaces",
     image: "/home/sarjah.webp",
   },
   {
-    title: "Beach Homes",
-    subtitle: "Coastal Serenity",
+    title: "Plots",
+    subtitle: "Build Your Dream Space",
     image: "/home/rak.webp",
   },
-  { title: "Lofts", subtitle: "Urban Modern", image: "/home/ajman.webp" },
+  {
+    title: "Investments",
+    subtitle: "High-Return Opportunities",
+    image: "/home/ajman.webp",
+  },
 ];
 
 export default function PropertyTypeSlider() {
