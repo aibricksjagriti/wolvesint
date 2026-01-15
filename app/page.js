@@ -12,7 +12,7 @@ import TrendingProjectsClient from "@/src/Home/TrendingProjectsClient";
 
 export default function Home() {
   return (
-    <main className=" bg-[var(--background)]">
+    <main className=" bg-background">
       <HeroSection />
       <UpcomingProjects />
       {/* <TrendingProjects /> */}

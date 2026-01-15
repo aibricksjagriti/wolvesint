@@ -157,3 +157,20 @@ h1, h2, h3, h4, h5, h6 {
     animation: gradientShift 8s ease infinite;
   }
 }
+
+.badge {
+  @apply text-xs bg-gray-100 px-3 py-1 rounded-full;
+}
+
+.btn-primary {
+  @apply bg-brickred text-white px-6 py-3 rounded-lg font-semibold hover:bg-ochre transition;
+}
+
+.btn-outline {
+  @apply border border-brickred text-brickred px-6 py-3 rounded-lg font-semibold hover:bg-brickred hover:text-white transition;
+}
+
+.section-title {
+  @apply text-3xl font-semibold;
+}
+
