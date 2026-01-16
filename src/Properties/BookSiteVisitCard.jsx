@@ -5,12 +5,18 @@ import { Calendar as CalendarIcon, Search } from "lucide-react";
 import { DayPicker } from "react-day-picker";
 import { format } from "date-fns";
 import "react-day-picker/dist/style.css";
+import { useRouter } from "next/navigation";
 
 export default function BookSiteVisitCard() {
+  const router = useRouter();
+
   const [activeTab, setActiveTab] = useState("site");
   const [showCalendar, setShowCalendar] = useState(false);
   const [selectedDate, setSelectedDate] = useState(new Date());
   const [openUpward, setOpenUpward] = useState(false);
+
+  //  Search state (SAME AS ABOUT US HERO)
+  const [searchText, setSearchText] = useState("");
 
   const inputRef = useRef(null);
 
@@ -18,15 +24,20 @@ export default function BookSiteVisitCard() {
     if (inputRef.current) {
       const rect = inputRef.current.getBoundingClientRect();
       const spaceBelow = window.innerHeight - rect.bottom;
-      const calendarHeight = 360; // safe average height
-
+      const calendarHeight = 360;
       setOpenUpward(spaceBelow < calendarHeight);
     }
     setShowCalendar((prev) => !prev);
   };
 
+  //  Handle Search (IDENTICAL BEHAVIOR)
+  const handleSearch = () => {
+    if (!searchText.trim()) return;
+    router.push(`/search?search=${encodeURIComponent(searchText)}`);
+  };
+
   return (
-    <div className="w-full max-w-md mx-auto bg-white rounded-2xl shadow-md p-6 relative ">
+    <div className="w-full max-w-md mx-auto bg-white rounded-2xl shadow-md p-6 relative">
       {/* Tabs */}
       <div className="flex rounded-lg overflow-hidden border mb-5">
         <button
@@ -41,15 +52,19 @@ export default function BookSiteVisitCard() {
         </button>
       </div>
 
-      {/* Search */}
+      {/* 🔍 Search */}
       <div className="relative mb-4">
         <Search
           size={18}
-          className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"
+          onClick={handleSearch}
+          className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 cursor-pointer"
         />
         <input
           type="text"
           placeholder="Search projects"
+          value={searchText}
+          onChange={(e) => setSearchText(e.target.value)}
+          onKeyDown={(e) => e.key === "Enter" && handleSearch()}
           className="w-full pl-10 pr-4 py-3 rounded-lg bg-gray-100 text-sm focus:outline-none"
         />
       </div>
@@ -91,7 +106,6 @@ export default function BookSiteVisitCard() {
               }}
             />
 
-            {/* Footer Buttons */}
             <div className="flex justify-end gap-3 mt-4">
               <button
                 onClick={() => setShowCalendar(false)}
@@ -99,12 +113,6 @@ export default function BookSiteVisitCard() {
               >
                 Done
               </button>
-              {/* <button
-                onClick={() => setShowCalendar(false)}
-                className="px-4 py-2 rounded-lg bg-ochre text-white text-sm"
-              >
-                Next
-              </button> */}
             </div>
           </div>
         )}
