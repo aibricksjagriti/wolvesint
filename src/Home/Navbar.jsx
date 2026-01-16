@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 
-export default function Navbar() {
+export default function Navbar({ onRegisterClick }) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -35,17 +35,27 @@ export default function Navbar() {
             >
               PROPERTIES
             </a>
+
+            <a
+              href="/contact"
+              className="text-[var(--color-lightcream)] font-sans hover:text-[var(--color-ochre)] transition-colors"
+            >
+              CONTACT US
+            </a>
             {/* <a
               href="/news"
               className="text-[var(--color-lightcream)] font-sans hover:text-[var(--color-ochre)] transition-colors"
             >
               NEWS
             </a> */}
-            <a href="/contact">
-              <button className="ml-4 bg-[var(--color-ochre)] text-[var(--color-darkgray)] px-5 py-2 rounded-full font-sans font-semibold hover:bg-[var(--color-brickred)] hover:border-2 hover:border-[var(--color-lightcream)] hover:text-[var(--color-lightcream)] transition-all">
-                CONTACT US
-              </button>
-            </a>
+            {/* <a href="/contact"> */}
+            <button
+              onClick={onRegisterClick}
+              className="ml-4 bg-[var(--color-ochre)] text-[var(--color-darkgray)] px-5 py-2 rounded-full font-sans font-semibold hover:bg-[var(--color-brickred)] hover:border-2 hover:border-[var(--color-lightcream)] hover:text-[var(--color-lightcream)] transition-all"
+            >
+              Register
+            </button>
+            {/* </a> */}
           </div>
 
           {/* Mobile Menu Button */}
