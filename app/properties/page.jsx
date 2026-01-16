@@ -7,17 +7,35 @@ import Link from "next/link";
 
 const ITEMS_PER_PAGE = 10;
 
+// async function getProperties() {
+//   const res = await fetch(
+//     `${process.env.NEXT_PUBLIC_API_URL}/api/v1/properties`,
+//     { cache: "no-store" }
+//   );
+
+//   if (!res.ok) {
+//     throw new Error("Failed to fetch properties");
+//   }
+
+//   return res.json();
+// }
+
 async function getProperties() {
-  const res = await fetch(
-    `${process.env.NEXT_PUBLIC_API_URL}/api/v1/properties`,
-    { cache: "no-store" }
-  );
+  try {
+    const res = await fetch(
+      `${process.env.NEXT_PUBLIC_API_URL}/api/v1/properties`,
+      { cache: "no-store" }
+    );
 
-  if (!res.ok) {
-    throw new Error("Failed to fetch properties");
+    if (!res.ok) {
+      throw new Error("API response not OK");
+    }
+
+    return await res.json();
+  } catch (error) {
+    // This will trigger error.jsx
+    throw new Error("Failed to load properties");
   }
-
-  return res.json();
 }
 
 export default async function PageProperties({ searchParams }) {
