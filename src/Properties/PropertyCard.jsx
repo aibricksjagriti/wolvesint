@@ -1,129 +1,90 @@
+"use client";
 import Image from "next/image";
-import { MapPin } from "lucide-react";
+import {
+  MapPin,
+  Heart,
+  CarTaxiFront,
+  CarFront,
+  MessageCircleMore,
+} from "lucide-react";
+import Link from "next/link";
 
-export default function PropertyCard() {
+export default function PropertyCard({ property }) {
   return (
-    <div className="rounded-xl shadow-sm hover:shadow-md transition overflow-hidden mb-10">
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-        {/* Image */}
-        <div className="relative h-48 sm:h-full">
+    <div className="bg-white rounded-xl shadow-sm hover:shadow-md transition overflow-hidden border-gray-500">
+      <div className="flex flex-col sm:flex-row gap-4 p-4">
+        {/* LEFT IMAGE */}
+        <div className="relative w-full sm:w-[260px] h-[180px] rounded-lg overflow-hidden bg-gray-200">
           <Image
-            src="/home/upcoming/sobha-kharadi.webp"
-            alt="Property"
+            src={
+              property.imageGallery?.[0] || "/home/upcoming/sobha-kharadi.webp"
+            }
+            alt={property.propertyTitle}
             fill
             className="object-cover"
           />
         </div>
 
-        {/* Info */}
-        <div className="sm:col-span-2 p-4 flex flex-col justify-between">
+        {/* RIGHT CONTENT */}
+        <div className="flex-1 flex flex-col justify-between">
+          {/* TOP INFO */}
           <div>
-            <h2 className="text-lg font-semibold text-darkGray">
-              AI Bricks Signature Towers
-            </h2>
+            <div className="flex justify-between items-start">
+              <h2 className="text-lg font-semibold text-darkGray">
+                {property.propertyTitle}
+              </h2>
 
-            <p className="flex items-center gap-1 text-md text-gray-500 mt-1">
-              <MapPin size={14} /> Hinjewadi, Pune
+              <p className="text-lg font-semibold text-darkGray">
+                ₹ {Number(property.totalPrice).toLocaleString("en-IN")}
+              </p>
+            </div>
+
+            {/* LOCATION */}
+            <p className="flex items-center gap-1 text-sm text-gray-500 mt-1">
+              <MapPin size={14} />
+              {property.locality}
             </p>
 
-            <div className="mt-3 space-y-1 text-md">
-              <p>2, 3 BHK • 850 – 1200 sqft</p>
-              <p className="font-semibold text-brickred text-md">
-                ₹ 1.10 Cr – 2.40 Cr
-              </p>
+            {/* CONFIG ROW (Single – as per API) */}
+            <div className="mt-3 border rounded-md overflow-hidden">
+              <div className="grid grid-cols-3 text-sm bg-gray-50 px-3 py-2">
+                <span className="font-medium">{property.subType}</span>
+                <span className="text-center">{property.builtUpArea} sqft</span>
+                <span className="text-right font-medium">
+                  ₹ {Number(property.totalPrice).toLocaleString("en-IN")}
+                </span>
+              </div>
             </div>
           </div>
 
-          {/* Actions */}
-          <div className="flex gap-3 mt-4">
-            <button className="flex-1 border border-brickred text-darkGray py-2 rounded-lg text-md hover:bg-brickred hover:text-white transition">
-              Schedule Tour
-            </button>
+          {/* BOTTOM INFO */}
+          <div className="mt-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+            {/* BUILDER */}
+            <div>
+              <p className="text-md font-medium text-darkGray">
+                {property.builderName}
+              </p>
+              <p className="text-sm text-gray-500">
+                {property.seller?.sellerType}
+              </p>
+            </div>
 
-            <button className="flex-1 bg-[var(--brick-red)] text-white py-2 rounded-lg text-sm hover:bg-[var(--brick-red-dark)] transition">
-              Live Chat
-            </button>
+            {/* ACTIONS */}
+            <div className="flex gap-3">
+              <button className="flex items-center gap-1 border bg-ochre border-gray-300 px-4 py-2 rounded-lg text-lg hover:bg-brickred text-lightcream transition">
+                <CarFront /> Tour
+              </button>
+
+              <Link
+                href={`/properties/${property.id}`}
+                className="flex items-center gap-1 bg-brickred text-white px-4 py-2 rounded-lg text-md hover:bg-ochre transition"
+              >
+                View Details
+              </Link>
+            </div>
           </div>
         </div>
       </div>
     </div>
   );
 }
-
-// "use client";
-
-// import Image from "next/image";
-// import { MapPin } from "lucide-react";
-
-// export default function PropertyCard({ property }) {
-//   // 🔐 SAFETY CHECK
-//   if (!property) return null;
-
-//   const {
-//     propertyTitle,
-//     city,
-//     locality,
-//     subType,
-//     builtUpArea,
-//     totalPrice,
-//     imageGallery,
-//   } = property;
-
-//   const formatPrice = (price) => {
-//     if (!price) return "₹ N/A";
-//     if (price >= 10000000) return `₹ ${(price / 10000000).toFixed(2)} Cr`;
-//     if (price >= 100000) return `₹ ${(price / 100000).toFixed(2)} L`;
-//     return `₹ ${price}`;
-//   };
-
-//   return (
-//     <div className="rounded-xl shadow-sm hover:shadow-md transition overflow-hidden mb-10 bg-white">
-//       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-//         <div className="relative h-48 sm:h-full">
-//           <Image
-//             src={
-//               imageGallery && imageGallery.length > 0
-//                 ? imageGallery[0]
-//                 : "/home/upcoming/sobha-kharadi.webp"
-//             }
-//             alt={propertyTitle || "Property"}
-//             fill
-//             className="object-cover"
-//           />
-//         </div>
-
-//         <div className="sm:col-span-2 p-4 flex flex-col justify-between">
-//           <div>
-//             <h2 className="text-lg font-semibold text-darkGray">
-//               {propertyTitle}
-//             </h2>
-
-//             <p className="flex items-center gap-1 text-md text-gray-500 mt-1">
-//               <MapPin size={14} /> {locality}, {city}
-//             </p>
-
-//             <div className="mt-3 space-y-1 text-md">
-//               <p>
-//                 {subType} • {builtUpArea} sqft
-//               </p>
-
-//               <p className="font-semibold text-brickred text-md">
-//                 {formatPrice(totalPrice)}
-//               </p>
-//             </div>
-//           </div>
-
-//           <div className="flex gap-3 mt-4">
-//             <button className="flex-1 border border-brickred text-darkGray py-2 rounded-lg hover:bg-brickred hover:text-white transition">
-//               Schedule Tour
-//             </button>
-
-//             <button className="flex-1 bg-[var(--brick-red)] text-white py-2 rounded-lg hover:bg-[var(--brick-red-dark)] transition">
-//               Live Chat
-//             </button>
-//           </div>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// }

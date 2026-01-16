@@ -45,7 +45,7 @@ export default function LogoSlider() {
                 alt={logo.alt}
                 width={180}
                 height={100}
-                className="object-contain w-full h-auto"
+                className="object-fit w-full h-[80px]"
               />
             </div>
           ))}

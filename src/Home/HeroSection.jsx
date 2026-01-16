@@ -222,7 +222,7 @@ export default function HeroSection() {
 
         {/* Search Box */}
         <div className="w-full md:w-[85%] lg:w-[80%] bg-white/10 backdrop-blur-md border border-brickred rounded-2xl p-6 shadow-2xl">
-          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4 mb-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 mb-4">
             <select
               value={propertyType}
               onChange={(e) => setPropertyType(e.target.value)}
@@ -254,8 +254,22 @@ export default function HeroSection() {
               className="p-3 rounded-lg bg-white text-black"
             >
               <option value="">Developer</option>
-              <option value="EMAAR">EMAAR</option>
-              <option value="DAMAC">DAMAC</option>
+              <option value="Shapoorji">Shapoorji Pallonji Real Estate</option>
+              <option value="Krisala Developers">Krisala Developers</option>
+              <option value="Hiranandani Developers">
+                Hiranandani Developers
+              </option>
+              <option value="Tata Housing Development Company">
+                Tata Housing Development Company
+              </option>
+              <option value="Gera Developers">Gera Developers</option>
+              <option value="Kolte Patil Developers">
+                Kolte Patil Developers
+              </option>
+              <option value="Lodha Developers">Lodha Developers</option>
+              <option value="Godrej Developers">Godrej Developers</option>
+              <option value="Kohinoor Developers">Kohinoor Developers</option>
+              <option value="VTP Developers">VTP Developers</option>
             </select>
 
             <select
@@ -267,11 +281,15 @@ export default function HeroSection() {
               className="p-3 rounded-lg bg-white text-black"
             >
               <option value="">Price</option>
-              <option value="100000-500000">$100k - $500k</option>
-              <option value="500000-1000000">$500k - $1M</option>
+              <option value="0-5000000">Under ₹50 Lakhs</option>
+              <option value="5000000-10000000">₹50 Lakhs - ₹1 Crore</option>
+              <option value="10000000-15000000">₹1 - 1.5 Crores</option>
+              <option value="15000000-25000000">₹1.5 - 2.5 Crores</option>
+              <option value="25000000-40000000">₹2.5 - 4 Crores</option>
+              <option value="40000000-">Above ₹4 Crores</option>
             </select>
 
-            <MultiSelect />
+            {/* <MultiSelect /> */}
           </div>
 
           {/* Search input */}

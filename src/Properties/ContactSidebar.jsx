@@ -1,6 +1,6 @@
 export default function ContactSidebar() {
   return (
-    <div className="sticky top-24 bg-white rounded-xl shadow-sm p-5">
+    <div className=" bg-white rounded-xl shadow-sm p-5">
       <h3 className="text-xl font-semibold text-darkGray mb-3">
         Call Me Instantly
       </h3>
