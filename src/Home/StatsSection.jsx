@@ -13,7 +13,7 @@ export default function StatsSection() {
         </div>
 
         {/* News Ticker */}
-        <div className="text-[var(--color-lightcream)]  font-medium text-md  text-center mb-8 border-b border-[var(--color-lightcream)] pb-2 whitespace-nowrap overflow-hidden">
+        <div className="text-lightcream  font-medium text-md  text-center mb-8 border-b border-lightcream pb-2 whitespace-nowrap overflow-hidden">
           <marquee behavior="scroll" direction="left" scrollamount="5">
             Dubai cracks down on illegal, overcrowded apartments – AP News. UAE
             property sales hit $87 bn as luxury deals soar – Arabian Business.

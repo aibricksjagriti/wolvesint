@@ -24,28 +24,28 @@ const ProjectSlider = () => {
       city: "Pune",
       image: "/home/upcoming/godrej-hillside.jpg",
     },
-    {
-      name: "L&T Hinjewadi",
-      city: "Pune",
-      image: "/home/upcoming/L&T-Hinjewadi.jpg",
-    },
+    // {
+    //   name: "L&T Hinjewadi",
+    //   city: "Pune",
+    //   image: "/home/upcoming/L&T-Hinjewadi.jpg",
+    // },
 
-    // Mumbai Projects
-    {
-      name: "Lodha Park",
-      city: "Mumbai",
-      image: "/home/upcoming/Lodha-Park.webp",
-    },
-    {
-      name: "Godrej Five Gardens",
-      city: "Mumbai",
-      image: "/home/upcoming/Godrej-Five-Gardens.webp",
-    },
-    {
-      name: "Runwal Greens",
-      city: "Mumbai",
-      image: "/home/upcoming/Runwal-Greens.jpg",
-    },
+    // // Mumbai Projects
+    // {
+    //   name: "Lodha Park",
+    //   city: "Mumbai",
+    //   image: "/home/upcoming/Lodha-Park.webp",
+    // },
+    // {
+    //   name: "Godrej Five Gardens",
+    //   city: "Mumbai",
+    //   image: "/home/upcoming/Godrej-Five-Gardens.webp",
+    // },
+    // {
+    //   name: "Runwal Greens",
+    //   city: "Mumbai",
+    //   image: "/home/upcoming/Runwal-Greens.jpg",
+    // },
 
     // Dubai Projects
     {
@@ -70,7 +70,7 @@ const ProjectSlider = () => {
 
   const handleNext = () => {
     setPositionIndexes((prevIndexes) =>
-      prevIndexes.map((prevIndex) => (prevIndex + 1) % projects.length)
+      prevIndexes.map((prevIndex) => (prevIndex + 1) % projects.length),
     );
     setActiveIndex((prev) => (prev + 1) % projects.length);
   };
@@ -78,8 +78,8 @@ const ProjectSlider = () => {
   const handleBack = () => {
     setPositionIndexes((prevIndexes) =>
       prevIndexes.map(
-        (prevIndex) => (prevIndex + projects.length - 1) % projects.length
-      )
+        (prevIndex) => (prevIndex + projects.length - 1) % projects.length,
+      ),
     );
     setActiveIndex((prev) => (prev - 1 + projects.length) % projects.length);
   };

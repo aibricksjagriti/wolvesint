@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 
-export default function Navbar({ onRegisterClick }) {
+export default function Navbar({ onLoginClick }) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -42,20 +42,13 @@ export default function Navbar({ onRegisterClick }) {
             >
               CONTACT US
             </a>
-            {/* <a
-              href="/news"
-              className="text-[var(--color-lightcream)] font-sans hover:text-[var(--color-ochre)] transition-colors"
-            >
-              NEWS
-            </a> */}
-            {/* <a href="/contact"> */}
+
             <button
-              onClick={onRegisterClick}
+              onClick={onLoginClick}
               className="ml-4 bg-[var(--color-ochre)] text-[var(--color-darkgray)] px-5 py-2 rounded-full font-sans font-semibold hover:bg-[var(--color-brickred)] hover:border-2 hover:border-[var(--color-lightcream)] hover:text-[var(--color-lightcream)] transition-all"
             >
-              Register
+              Login
             </button>
-            {/* </a> */}
           </div>
 
           {/* Mobile Menu Button */}
@@ -117,20 +110,19 @@ export default function Navbar({ onRegisterClick }) {
             Property Listed
           </a>
           <a
-            href="/news"
+            href="/contact"
             className="text-[var(--color-darkgray)] font-sans text-lg hover:text-[var(--color-brickred)] transition"
             onClick={() => setIsOpen(false)}
           >
-            News
+            Contact Us
           </a>
-          <a href="/contact">
-            <button
-              className="bg-[var(--color-brickred)] text-[var(--color-lightcream)] px-6 py-2 rounded-full font-sans font-semibold hover:bg-[var(--color-ochre)] transition"
-              onClick={() => setIsOpen(false)}
-            >
-              Contact Us
-            </button>
-          </a>
+
+          <button
+            onClick={onLoginClick}
+            className="bg-[var(--color-brickred)] text-[var(--color-lightcream)] px-6 py-2 rounded-full font-sans font-semibold hover:bg-[var(--color-ochre)] transition"
+          >
+            Login
+          </button>
         </div>
       </div>
     </>

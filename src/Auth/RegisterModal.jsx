@@ -4,14 +4,13 @@ import Image from "next/image";
 import { X } from "lucide-react";
 import { useState } from "react";
 import { Eye, EyeOff, Loader2 } from "lucide-react";
-import LoginModal from "./LoginModal";
+import toast from "react-hot-toast";
 
-export default function RegisterModal({ open, onClose }) {
+export default function RegisterModal({ open, onClose, onLoginClick }) {
   if (!open) return null;
 
   const [showPassword, setShowPassword] = useState(false);
   const [loading, setLoading] = useState(false);
-  const [loginOpen, setLoginOpen] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -33,13 +32,28 @@ export default function RegisterModal({ open, onClose }) {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(payload),
-        }
+        },
       );
 
       const data = await res.json();
-      console.log(data);
+
+      if (!res.ok) {
+        throw new Error(data.message || "Registration failed");
+      }
+
+      // ✅ SUCCESS TOAST
+      toast.success("Registration successful! Please login.");
+
+      // ✅ Close register modal
+      onClose();
+
+      // ✅ Open login modal after short delay
+      setTimeout(() => {
+        onLoginClick();
+      }, 800);
     } catch (err) {
       console.error(err);
+      toast.error(err.message || "Something went wrong");
     } finally {
       setLoading(false);
     }
@@ -157,19 +171,18 @@ export default function RegisterModal({ open, onClose }) {
               </button>
             </form>
 
-            <p className="text-center text-slate-400 text-sm mt-6">
+            <p className="text-center text-sm mt-6">
               Already have an account?{" "}
               <button
-                type="button"
-                onClick={() => setLoginOpen(true)}
-                className="text-[#C9A24D] hover:underline"
+                onClick={() => {
+                  onClose();
+                  onLoginClick();
+                }}
+                className="text-[#C9A24D]"
               >
                 Login
               </button>
             </p>
-
-            {/* Login Modal */}
-            <LoginModal open={loginOpen} onClose={() => setLoginOpen(false)} />
           </div>
         </div>
       </div>

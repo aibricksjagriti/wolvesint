@@ -1,19 +1,21 @@
 "use client";
 
-import { useState } from "react";
+import { useRef } from "react";
 import Navbar from "./Home/Navbar";
-import RegisterModal from "./Auth/RegisterModal";
 import ContactModal from "./Modal/ContactModal";
 import Footer from "./Footer";
 import ClientLayout from "./ClientLayout";
+import AuthModalController from "./Auth/AuthModalController";
 
 export default function ClientLayoutWrapper({ children }) {
-  const [open, setOpen] = useState(false);
+  const authModalRef = useRef(null);
 
   return (
     <ClientLayout>
-      <Navbar onRegisterClick={() => setOpen(true)} />
-      <RegisterModal open={open} onClose={() => setOpen(false)} />
+      {/* Pass real handler to Navbar */}
+      <Navbar onLoginClick={() => authModalRef.current?.openLogin()} />
+      {/*  Modal controller */}
+      <AuthModalController ref={authModalRef} />
       {children}
       <ContactModal />
       <Footer />
