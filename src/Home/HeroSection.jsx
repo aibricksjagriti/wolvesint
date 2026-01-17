@@ -347,7 +347,7 @@ export default function HeroSection() {
     <section className="relative h-[700px] w-full overflow-hidden">
       {/* LCP IMAGE (fastest render) */}
       <Image
-        src="/home/Cta-banner-2.jpg"
+        src="/home/hero-banner-home.png"
         alt="Luxury Properties"
         fill
         priority
