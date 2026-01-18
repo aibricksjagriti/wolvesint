@@ -95,7 +95,7 @@ export default function DemandSection() {
     const fetchLocalities = async () => {
       try {
         const res = await fetch(
-          `${process.env.NEXT_PUBLIC_API_URL}/api/v1/properties/search`,
+          `${process.env.NEXT_PUBLIC_API_URL || ''}/api/v1/properties/search`,
           { cache: "force-cache" }, // enables Next.js caching
         );
 

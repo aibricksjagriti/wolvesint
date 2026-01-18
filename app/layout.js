@@ -1,6 +1,6 @@
 import { Cinzel, Lato } from "next/font/google";
 import "./globals.css";
-import ClientLayoutWrapper from "@/src/ClientLayoutWrapper";
+import ConditionalLayout from "@/src/ConditionalLayout";
 import { Toaster } from "react-hot-toast";
 
 const cinzel = Cinzel({
@@ -27,14 +27,8 @@ export default function RootLayout({ children }) {
         suppressHydrationWarning
         className={`${cinzel.variable} ${lato.variable} antialiased bg-[var(--background)] relative`}
       >
-        <ClientLayoutWrapper>
-          {/* <Navbar onRegisterClick={() => setOpen(true)} />
-          <RegisterModal open={open} onClose={() => setOpen(false)} /> */}
-          {children}
-          <Toaster position="top-right" reverseOrder={false} />
-          {/* <ContactModal />
-          <Footer /> */}
-        </ClientLayoutWrapper>
+        <ConditionalLayout>{children}</ConditionalLayout>
+        <Toaster position="top-right" reverseOrder={false} />
       </body>
     </html>
   );

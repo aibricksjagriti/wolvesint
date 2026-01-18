@@ -10,12 +10,56 @@ export default function ContactPage() {
     message: "",
   });
 
-  const handleChange = (e) =>
-    setForm({ ...form, [e.target.name]: e.target.value });
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
+  const [success, setSuccess] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleChange = (e) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+    setError(""); // Clear error when user types
+  };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    alert("Form submitted successfully!");
+    setLoading(true);
+    setError("");
+    setSuccess(false);
+
+    try {
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
+      const response = await fetch(`${apiUrl}/api/v1/contact`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(form),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(
+          data.error || data.errors?.[0]?.msg || "Failed to submit form"
+        );
+      }
+
+      // Success
+      setSuccess(true);
+      setForm({
+        firstName: "",
+        lastName: "",
+        email: "",
+        phone: "",
+        message: "",
+      });
+
+      // Reset success message after 5 seconds
+      setTimeout(() => setSuccess(false), 5000);
+    } catch (err) {
+      setError(err.message || "An error occurred. Please try again.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -141,11 +185,26 @@ export default function ContactPage() {
             className="w-full rounded-xl border border-gray-300 p-3 focus:outline-none focus:ring-2 focus:ring-indigo-500"
           />
 
+          {/* Error Message */}
+          {error && (
+            <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-xl">
+              {error}
+            </div>
+          )}
+
+          {/* Success Message */}
+          {success && (
+            <div className="bg-green-50 border border-green-200 text-green-700 px-4 py-3 rounded-xl">
+              Form submitted successfully! We'll get back to you soon.
+            </div>
+          )}
+
           <button
             type="submit"
-            className="w-full bg-[var(--color-brickred)] text-white text-lg py-3 rounded-xl hover:bg-[var(--color-ochre)] transition-all duration-300"
+            disabled={loading}
+            className="w-full bg-[var(--color-brickred)] text-white text-lg py-3 rounded-xl hover:bg-[var(--color-ochre)] transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
           >
-            Submit Form →
+            {loading ? "Submitting..." : "Submit Form →"}
           </button>
         </form>
       </div>
